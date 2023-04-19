@@ -1,7 +1,7 @@
 # Date Selection tool for Aiogram Telegram Bots
 
 ## Description
-A simple inline calendar, date selection tool for [aiogram](https://github.com/aiogram/aiogram) telegram bots written in Python.
+A simple inline calendar, date selection tool for [aiogram 3.0](https://github.com/aiogram/aiogram) telegram bots written in Python.
 Offers two types of date pickers:
 Navigation calendar - user can either select a date or move to the next or previous month/year by clicking a singe button.
 Dialog calendar - user selects year on first stage, month on next stage, day on last stage
