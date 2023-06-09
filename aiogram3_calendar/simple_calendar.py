@@ -7,6 +7,29 @@ from aiogram.types import CallbackQuery
 from aiogram3_calendar.calendar_types import SimpleCalendarCallback, SimpleCalendarAction, WEEKDAYS
 
 
+async def replace_month_name(month_name: str) -> str:
+    """
+    Replace month name to Russian
+    :param month_name:
+    :return:
+    """
+    months = {
+        'january': 'Январь',
+        'february': 'Февраль',
+        'march': 'Март',
+        'april': 'Апрель',
+        'may': 'Май',
+        'june': 'Июнь',
+        'july': 'Июль',
+        'august': 'Август',
+        'september': 'Сентябрь',
+        'october': 'Октябрь',
+        'november': 'Ноябрь',
+        'december': 'Декабрь'
+    }
+    return months[month_name.lower()]
+
+
 class SimpleCalendar:
 
     @staticmethod
@@ -36,7 +59,7 @@ class SimpleCalendar:
                         day=1).pack()
                 ),
                 InlineKeyboardButton(
-                    text=f'{calendar.month_name[month]} {str(year)}',
+                    text=f"{await replace_month_name(calendar.month_name[month])} {str(year)}",
                     callback_data=ignore_callback.pack()
                 ),
                 InlineKeyboardButton(

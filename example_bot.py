@@ -7,7 +7,7 @@ from aiogram.types import Message, CallbackQuery, ReplyKeyboardMarkup, KeyboardB
 from aiogram3_calendar import simple_cal_callback, SimpleCalendar, dialog_cal_callback, DialogCalendar
 from config import API_TOKEN
 
-# API_TOKEN = '' uncomment and insert your telegram bot API key here
+# API_TOKEN = ''  # uncomment and insert your telegram bot API key here
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
